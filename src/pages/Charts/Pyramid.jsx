@@ -13,14 +13,14 @@ import {
 
 import { PyramidData } from "../../data/dummy";
 import { useStateContext } from "../../contexts/ContextProvider";
-import { ChartsHeader } from "../../components";
+import { Header } from "../../components";
 
 const Pyramid = () => {
   const { currentMode } = useStateContext();
 
   return (
     <div className="m-4 md:m-10 mt-24  p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl">
-      <ChartsHeader category="Pyramid" title="Food Comparison Chart" />
+      <Header category="Chart" title="Pyramid" />
       <div className="w-full">
         <AccumulationChartComponent
           id="pyramid-chart"

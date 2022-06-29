@@ -4,74 +4,63 @@ import {
   SeriesCollectionDirective,
   SeriesDirective,
   Inject,
-  HiloSeries,
+  ColumnSeries,
+  Category,
   Tooltip,
-  DateTime,
-  Zoom,
-  Logarithmic,
-  Crosshair,
+  Legend,
+  RangeColorSettingsDirective,
+  RangeColorSettingDirective,
 } from "@syncfusion/ej2-react-charts";
 
 import {
-  financialChartData,
-  FinancialPrimaryXAxis,
-  FinancialPrimaryYAxis,
+  colorMappingData,
+  ColorMappingPrimaryXAxis,
+  ColorMappingPrimaryYAxis,
+  rangeColorMapping,
 } from "../../data/dummy";
+import { Header } from "../../components";
 import { useStateContext } from "../../contexts/ContextProvider";
-import { ChartsHeader } from "../../components";
 
-const date1 = new Date("2017, 1, 1");
-
-// eslint-disable-next-line consistent-return
-function filterValue(value) {
-  if (value.x >= date1) {
-    // eslint-disable-next-line no-sequences
-    return value.x, value.high, value.low;
-  }
-}
-const returnValue = financialChartData.filter(filterValue);
-
-const Financial = () => {
+const ColorMapping = () => {
   const { currentMode } = useStateContext();
 
   return (
     <div className="m-4 md:m-10 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl">
-      <ChartsHeader category="Financial" title="AAPLE Historical" />
+      <Header category="Chart" title="Color Mapping" />
       <div className="w-full">
         <ChartComponent
           id="charts"
-          primaryXAxis={FinancialPrimaryXAxis}
-          primaryYAxis={FinancialPrimaryYAxis}
+          primaryXAxis={ColorMappingPrimaryXAxis}
+          primaryYAxis={ColorMappingPrimaryYAxis}
           chartArea={{ border: { width: 0 } }}
-          tooltip={{ enable: true, shared: true }}
-          crosshair={{ enable: true, lineType: "Vertical", line: { width: 0 } }}
+          legendSettings={{ mode: "Range", background: "white" }}
+          tooltip={{ enable: true }}
           background={currentMode === "Dark" ? "#33373E" : "#fff"}
         >
-          <Inject
-            services={[
-              HiloSeries,
-              Tooltip,
-              DateTime,
-              Logarithmic,
-              Crosshair,
-              Zoom,
-            ]}
-          />
+          <Inject services={[ColumnSeries, Tooltip, Category, Legend]} />
           <SeriesCollectionDirective>
             <SeriesDirective
-              dataSource={returnValue}
+              dataSource={colorMappingData[0]}
+              name="USA"
               xName="x"
-              yName="low"
-              name="Apple Inc"
-              type="Hilo"
-              low="low"
-              high="high"
+              yName="y"
+              type="Column"
+              cornerRadius={{
+                topLeft: 10,
+                topRight: 10,
+              }}
             />
           </SeriesCollectionDirective>
+          <RangeColorSettingsDirective>
+            {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+            {rangeColorMapping.map((item, index) => (
+              <RangeColorSettingDirective key={index} {...item} />
+            ))}
+          </RangeColorSettingsDirective>
         </ChartComponent>
       </div>
     </div>
   );
 };
 
-export default Financial;
+export default ColorMapping;
