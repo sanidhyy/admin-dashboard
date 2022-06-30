@@ -15,11 +15,13 @@ import { PyramidData } from "../../data/dummy";
 import { useStateContext } from "../../contexts/ContextProvider";
 import { Header } from "../../components";
 
+// Pyramid
 const Pyramid = () => {
   const { currentMode } = useStateContext();
 
   return (
     <div className="m-4 md:m-10 mt-24  p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl">
+      {/* Header */}
       <Header category="Chart" title="Pyramid" />
       <div className="w-full">
         <AccumulationChartComponent
@@ -28,6 +30,7 @@ const Pyramid = () => {
           tooltip={{ enable: true }}
           background={currentMode === "Dark" ? "#33373E" : "#fff"}
         >
+          {/* Inject required services */}
           <Inject
             services={[
               AccumulationDataLabel,
@@ -38,6 +41,7 @@ const Pyramid = () => {
             ]}
           />
           <AccumulationSeriesCollectionDirective>
+            {/* Render data */}
             <AccumulationSeriesDirective
               name="Food"
               dataSource={PyramidData}

@@ -21,11 +21,13 @@ import {
 import { Header } from "../../components";
 import { useStateContext } from "../../contexts/ContextProvider";
 
+// Color Mapping
 const ColorMapping = () => {
   const { currentMode } = useStateContext();
 
   return (
     <div className="m-4 md:m-10 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl">
+      {/* Header */}
       <Header category="Chart" title="Color Mapping" />
       <div className="w-full">
         <ChartComponent
@@ -37,6 +39,7 @@ const ColorMapping = () => {
           tooltip={{ enable: true }}
           background={currentMode === "Dark" ? "#33373E" : "#fff"}
         >
+          {/* Inject required services */}
           <Inject services={[ColumnSeries, Tooltip, Category, Legend]} />
           <SeriesCollectionDirective>
             <SeriesDirective
@@ -52,6 +55,7 @@ const ColorMapping = () => {
             />
           </SeriesCollectionDirective>
           <RangeColorSettingsDirective>
+            {/* render each column data */}
             {/* eslint-disable-next-line react/jsx-props-no-spreading */}
             {rangeColorMapping.map((item, index) => (
               <RangeColorSettingDirective key={index} {...item} />

@@ -19,11 +19,13 @@ import {
 import { Header } from "../../components";
 import { useStateContext } from "../../contexts/ContextProvider";
 
+// Bar
 const Bar = () => {
   const { currentMode } = useStateContext();
 
   return (
     <div className="m-4 md:m-10 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl">
+      {/* Header */}
       <Header category="Chart" title="Bar" />
       <div className=" w-full">
         <ChartComponent
@@ -35,10 +37,12 @@ const Bar = () => {
           background={currentMode === "Dark" ? "#33373E" : "#fff"}
           legendSettings={{ background: "white" }}
         >
+          {/* Inject required services */}
           <Inject
             services={[ColumnSeries, Legend, Tooltip, Category, DataLabel]}
           />
           <SeriesCollectionDirective>
+            {/* render each column data */}
             {/* eslint-disable-next-line react/jsx-props-no-spreading */}
             {barCustomSeries.map((item, index) => (
               <SeriesDirective key={index} {...item} />

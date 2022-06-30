@@ -20,8 +20,10 @@ import {
 import { useStateContext } from "../../contexts/ContextProvider";
 import { Header } from "../../components";
 
+// date
 const date1 = new Date("2017, 1, 1");
 
+// Filter Value
 // eslint-disable-next-line consistent-return
 function filterValue(value) {
   if (value.x >= date1) {
@@ -29,13 +31,17 @@ function filterValue(value) {
     return value.x, value.high, value.low;
   }
 }
+
+// return value
 const returnValue = financialChartData.filter(filterValue);
 
+// Financial
 const Financial = () => {
   const { currentMode } = useStateContext();
 
   return (
     <div className="m-4 md:m-10 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl">
+      {/* Header */}
       <Header category="Chart" title="Financial" />
       <div className="w-full">
         <ChartComponent
@@ -47,6 +53,7 @@ const Financial = () => {
           crosshair={{ enable: true, lineType: "Vertical", line: { width: 0 } }}
           background={currentMode === "Dark" ? "#33373E" : "#fff"}
         >
+          {/* Inject required services */}
           <Inject
             services={[
               HiloSeries,
@@ -58,6 +65,7 @@ const Financial = () => {
             ]}
           />
           <SeriesCollectionDirective>
+            {/* Render data */}
             <SeriesDirective
               dataSource={returnValue}
               xName="x"
