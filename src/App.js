@@ -26,6 +26,7 @@ import { useStateContext } from "./contexts/ContextProvider";
 
 import "./App.css";
 
+// App
 const App = () => {
   const {
     setCurrentColor,
@@ -37,6 +38,7 @@ const App = () => {
     setThemeSettings,
   } = useStateContext();
 
+  // Get theme color & mode
   useEffect(() => {
     const currentThemeColor = localStorage.getItem("colorMode");
     const currentThemeMode = localStorage.getItem("themeMode");
@@ -50,6 +52,7 @@ const App = () => {
     <div className={currentMode === "Dark" ? "dark" : ""}>
       <BrowserRouter>
         <div className="flex relative dark:bg-main-dark-bg">
+          {/* Settings Button */}
           <div className="fixed right-4 bottom-4 z-50">
             <TooltipComponent content="Settings" position="Top">
               <button
@@ -62,6 +65,7 @@ const App = () => {
               </button>
             </TooltipComponent>
           </div>
+          {/* Check active menu */}
           {activeMenu ? (
             <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white">
               <Sidebar />
@@ -77,11 +81,13 @@ const App = () => {
               activeMenu ? "md:ml-72" : "flex-2"
             }`}
           >
+            {/* Navbar */}
             <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full">
               <Navbar />
             </div>
 
             <div>
+              {/* Theme settings dialog */}
               {themeSettings && <ThemeSettings />}
 
               <Routes>

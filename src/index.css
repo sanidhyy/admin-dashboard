@@ -1,11 +1,14 @@
+/* Google Fonts (Open Sans) */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
 
+/* reset body values to default */
 body {
   margin: 0;
   padding: 0;
   font-family: "Open Sans", sans-serif;
 }
 
+/* load tailwind css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
