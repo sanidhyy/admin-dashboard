@@ -2,6 +2,7 @@ import React, { createContext, useContext, useState } from "react";
 
 const StateContext = createContext();
 
+// is Clicked Initial State
 const initialState = {
   chat: false,
   cart: false,
@@ -9,6 +10,7 @@ const initialState = {
   notification: false,
 };
 
+// Context Provider
 export const ContextProvider = ({ children }) => {
   const [activeMenu, setActiveMenu] = useState(true);
   const [isClicked, setIsClicked] = useState(initialState);
@@ -17,6 +19,7 @@ export const ContextProvider = ({ children }) => {
   const [currentMode, setCurrentMode] = useState("Light");
   const [themeSettings, setThemeSettings] = useState(false);
 
+  // set theme mode handler
   const setMode = (e) => {
     setCurrentMode(e.target.value);
 
@@ -25,6 +28,7 @@ export const ContextProvider = ({ children }) => {
     setThemeSettings(false);
   };
 
+  // set theme color handler
   const setColor = (color) => {
     setCurrentColor(color);
 
@@ -33,6 +37,7 @@ export const ContextProvider = ({ children }) => {
     setThemeSettings(false);
   };
 
+  // handle navbutton click
   const handleClick = (clicked) => {
     setIsClicked({ ...initialState, [clicked]: !isClicked[clicked] });
   };
@@ -58,6 +63,7 @@ export const ContextProvider = ({ children }) => {
         initialState,
       }}
     >
+      {/* Render children (App) */}
       {children}
     </StateContext.Provider>
   );

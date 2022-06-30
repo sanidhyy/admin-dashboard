@@ -1,4 +1,9 @@
+// Contains whole app data
+// Dont remove anything from here
+
 import React from "react";
+
+// Icons Import
 import {
   AiOutlineCalendar,
   AiOutlineShoppingCart,
@@ -31,6 +36,8 @@ import { HiOutlineRefresh } from "react-icons/hi";
 import { TiTick } from "react-icons/ti";
 import { GiLouvrePyramid } from "react-icons/gi";
 import { GrLocation } from "react-icons/gr";
+
+// Images Import
 import avatar from "../assets/images/avatar.jpg";
 import avatar2 from "../assets/images/avatar2.jpg";
 import avatar3 from "../assets/images/avatar3.png";
@@ -42,8 +49,8 @@ import product4 from "../assets/images/product4.jpg";
 import product5 from "../assets/images/product5.jpg";
 import product6 from "../assets/images/product6.jpg";
 import product7 from "../assets/images/product7.jpg";
-import product8 from "../assets/images/product8.jpg";
 
+// grid order image
 export const gridOrderImage = (props) => (
   <div>
     <img
@@ -54,6 +61,7 @@ export const gridOrderImage = (props) => (
   </div>
 );
 
+// grid order status
 export const gridOrderStatus = (props) => (
   <button
     type="button"
@@ -64,6 +72,7 @@ export const gridOrderStatus = (props) => (
   </button>
 );
 
+// kanban grid
 export const kanbanGrid = [
   { headerText: "To Do", keyField: "Open", allowToggle: true },
 
@@ -78,6 +87,8 @@ export const kanbanGrid = [
 
   { headerText: "Done", keyField: "Close", allowToggle: true },
 ];
+
+// grid employee profile
 const gridEmployeeProfile = (props) => (
   <div className="flex items-center gap-2">
     <img
@@ -89,12 +100,15 @@ const gridEmployeeProfile = (props) => (
   </div>
 );
 
+// grid employee country
 const gridEmployeeCountry = (props) => (
   <div className="flex items-center justify-center gap-2">
     <GrLocation />
     <span>{props.Country}</span>
   </div>
 );
+
+// editor data
 export const EditorData = () => (
   <div>
     <h3>
@@ -141,6 +155,8 @@ export const EditorData = () => (
     </h3>
   </div>
 );
+
+// customer grid image
 const customerGridImage = (props) => (
   <div className="image flex gap-4">
     <img
@@ -155,6 +171,7 @@ const customerGridImage = (props) => (
   </div>
 );
 
+// customer grid status
 const customerGridStatus = (props) => (
   <div className="flex gap-2 justify-center items-center text-gray-700 capitalize">
     <p
@@ -164,6 +181,8 @@ const customerGridStatus = (props) => (
     <p>{props.Status}</p>
   </div>
 );
+
+// area Primary x-axis
 export const areaPrimaryXAxis = {
   valueType: "DateTime",
   labelFormat: "y",
@@ -173,6 +192,7 @@ export const areaPrimaryXAxis = {
   labelStyle: { color: "gray" },
 };
 
+// area Primary y-axis
 export const areaPrimaryYAxis = {
   labelFormat: "{value}%",
   lineStyle: { width: 0 },
@@ -182,17 +202,23 @@ export const areaPrimaryYAxis = {
   minorTickLines: { width: 0 },
   labelStyle: { color: "gray" },
 };
+
+// bar Primary x-axis
 export const barPrimaryXAxis = {
   valueType: "Category",
   interval: 1,
   majorGridLines: { width: 0 },
 };
+
+// bar Primary y-axis
 export const barPrimaryYAxis = {
   majorGridLines: { width: 0 },
   majorTickLines: { width: 0 },
   lineStyle: { width: 0 },
   labelStyle: { color: "transparent" },
 };
+
+// area chart data
 const areaChartData = [
   [
     { x: new Date(2002, 0, 1), y: 2.2 },
@@ -232,6 +258,7 @@ const areaChartData = [
   ],
 ];
 
+// area custom series
 export const areaCustomSeries = [
   {
     dataSource: areaChartData[0],
@@ -262,6 +289,7 @@ export const areaCustomSeries = [
   },
 ];
 
+// bar chart data
 export const barChartData = [
   [
     { x: "USA", y: 46 },
@@ -280,6 +308,7 @@ export const barChartData = [
   ],
 ];
 
+// bar custom series
 export const barCustomSeries = [
   {
     dataSource: barChartData[0],
@@ -324,6 +353,8 @@ export const barCustomSeries = [
     },
   },
 ];
+
+// color mapping data
 export const colorMappingData = [
   [
     { x: "Jan", y: 6.96 },
@@ -344,6 +375,7 @@ export const colorMappingData = [
   ["#FF4040"],
 ];
 
+// range color mapping
 export const rangeColorMapping = [
   { label: "1°C to 10°C", start: "1", end: "10", colors: colorMappingData[1] },
 
@@ -362,12 +394,14 @@ export const rangeColorMapping = [
   },
 ];
 
+// color mapping Primary x-axis
 export const ColorMappingPrimaryXAxis = {
   valueType: "Category",
   majorGridLines: { width: 0 },
   title: "Months",
 };
 
+// color mapping Primary y-axis
 export const ColorMappingPrimaryYAxis = {
   lineStyle: { width: 0 },
   majorTickLines: { width: 0 },
@@ -376,6 +410,7 @@ export const ColorMappingPrimaryYAxis = {
   title: "Temperature",
 };
 
+// financial Primary x-axis
 export const FinancialPrimaryXAxis = {
   valueType: "DateTime",
   minimum: new Date("2016, 12, 31"),
@@ -384,6 +419,7 @@ export const FinancialPrimaryXAxis = {
   majorGridLines: { width: 0 },
 };
 
+// financial Primary y-axis
 export const FinancialPrimaryYAxis = {
   title: "Price",
   minimum: 100,
@@ -393,6 +429,7 @@ export const FinancialPrimaryYAxis = {
   majorTickLines: { width: 0 },
 };
 
+// Line Primary x-axis
 export const LinePrimaryXAxis = {
   valueType: "DateTime",
   labelFormat: "y",
@@ -402,6 +439,7 @@ export const LinePrimaryXAxis = {
   background: "white",
 };
 
+// Line Primary y-axis
 export const LinePrimaryYAxis = {
   labelFormat: "{value}%",
   rangePadding: "None",
@@ -413,6 +451,7 @@ export const LinePrimaryYAxis = {
   minorTickLines: { width: 0 },
 };
 
+// customers grid
 export const customersGrid = [
   { type: "checkbox", width: "50" },
   {
@@ -466,6 +505,7 @@ export const customersGrid = [
   },
 ];
 
+// employee grid
 export const employeesGrid = [
   {
     headerText: "Employee",
@@ -509,6 +549,7 @@ export const employeesGrid = [
   },
 ];
 
+// Sidebar Links
 export const links = [
   {
     title: "Dashboard",
@@ -598,6 +639,7 @@ export const links = [
   },
 ];
 
+// Cart Data
 export const cartData = [
   {
     image: product5,
@@ -619,6 +661,7 @@ export const cartData = [
   },
 ];
 
+// Chart Data
 export const chatData = [
   {
     image: avatar2,
@@ -646,6 +689,7 @@ export const chatData = [
   },
 ];
 
+// Earning Data
 export const earningData = [
   {
     icon: <MdOutlineSupervisorAccount />,
@@ -686,6 +730,7 @@ export const earningData = [
   },
 ];
 
+// Recent Transactions
 export const recentTransactions = [
   {
     icon: <BsCurrencyDollar />,
@@ -737,6 +782,7 @@ export const recentTransactions = [
   },
 ];
 
+// Weekly stats
 export const weeklyStats = [
   {
     icon: <FiShoppingCart />,
@@ -764,6 +810,7 @@ export const weeklyStats = [
   },
 ];
 
+// Products Performance
 export const productsPerformance = [
   {
     image: product5,
@@ -799,6 +846,7 @@ export const productsPerformance = [
   },
 ];
 
+// Medical Pro Branding
 export const medicalproBranding = {
   data: [
     {
@@ -843,6 +891,7 @@ export const medicalproBranding = {
   ],
 };
 
+// Theme Colors
 export const themeColors = [
   {
     name: "blue-theme",
@@ -870,6 +919,7 @@ export const themeColors = [
   },
 ];
 
+// User Profile Data
 export const userProfileData = [
   {
     icon: <BsCurrencyDollar />,
@@ -894,6 +944,7 @@ export const userProfileData = [
   },
 ];
 
+// Orders Grid
 export const ordersGrid = [
   {
     headerText: "Image",
@@ -944,6 +995,7 @@ export const ordersGrid = [
   },
 ];
 
+// Customers Data
 export const customersData = [
   {
     CustomerID: 1001,
@@ -1465,6 +1517,7 @@ export const customersData = [
   },
 ];
 
+// Employees Data
 export const employeesData = [
   {
     EmployeeID: 1,
@@ -2035,6 +2088,7 @@ export const employeesData = [
   },
 ];
 
+// Orders Data
 export const ordersData = [
   {
     OrderID: 10248,
@@ -2718,6 +2772,7 @@ export const ordersData = [
   },
 ];
 
+// Schedule Data
 export const scheduleData = [
   {
     Id: 1,
@@ -2913,6 +2968,7 @@ export const scheduleData = [
   },
 ];
 
+// Line Chart Data
 export const lineChartData = [
   [
     { x: new Date(2005, 0, 1), y: 21 },
@@ -2943,6 +2999,8 @@ export const lineChartData = [
     { x: new Date(2011, 0, 1), y: 100 },
   ],
 ];
+
+// Dropdown data
 export const dropdownData = [
   {
     Id: "1",
@@ -2957,6 +3015,8 @@ export const dropdownData = [
     Time: "May 2021",
   },
 ];
+
+// Spark Line Area Data
 export const SparklineAreaData = [
   { x: 1, yval: 2 },
   { x: 2, yval: 6 },
@@ -2965,6 +3025,7 @@ export const SparklineAreaData = [
   { x: 5, yval: 10 },
 ];
 
+// Line Custom Series
 export const lineCustomSeries = [
   {
     dataSource: lineChartData[0],
@@ -2997,6 +3058,7 @@ export const lineCustomSeries = [
   },
 ];
 
+// Pie Chart Data
 export const pieChartData = [
   { x: "Labour", y: 18, text: "18%" },
   { x: "Legal", y: 8, text: "8%" },
@@ -3007,6 +3069,7 @@ export const pieChartData = [
   { x: "Insurance", y: 16, text: "16%" },
 ];
 
+// Context Menu Items
 export const contextMenuItems = [
   "AutoFit",
   "AutoFitAll",
@@ -3026,6 +3089,7 @@ export const contextMenuItems = [
   "NextPage",
 ];
 
+// Pie chart data
 export const ecomPieChartData = [
   { x: "2018", y: 18, text: "35%" },
   { x: "2019", y: 18, text: "15%" },
@@ -3033,6 +3097,7 @@ export const ecomPieChartData = [
   { x: "2021", y: 18, text: "25%" },
 ];
 
+// Stacked chart data
 export const stackedChartData = [
   [
     { x: "Jan", y: 111.1 },
@@ -3054,6 +3119,7 @@ export const stackedChartData = [
   ],
 ];
 
+// Stacked custom series
 export const stackedCustomSeries = [
   {
     dataSource: stackedChartData[0],
@@ -3074,6 +3140,7 @@ export const stackedCustomSeries = [
   },
 ];
 
+// Stacked primary x-axis
 export const stackedPrimaryXAxis = {
   majorGridLines: { width: 0 },
   minorGridLines: { width: 0 },
@@ -3085,6 +3152,7 @@ export const stackedPrimaryXAxis = {
   valueType: "Category",
 };
 
+// Stacked primary y-axis
 export const stackedPrimaryYAxis = {
   lineStyle: { width: 0 },
   minimum: 100,
@@ -3097,6 +3165,7 @@ export const stackedPrimaryYAxis = {
   labelFormat: "{value}",
 };
 
+// Kanban Data
 export const kanbanData = [
   {
     Id: "Task 1",
@@ -3450,6 +3519,7 @@ export const kanbanData = [
   },
 ];
 
+// Financial Chart Data
 export const financialChartData = [
   {
     x: new Date("2012-04-02"),
@@ -5740,6 +5810,8 @@ export const financialChartData = [
     volume: 27939544,
   },
 ];
+
+// Pyramid Data
 export const PyramidData = [
   { x: "Sweet Treats", y: 120, text: "120 cal" },
   { x: "Milk, Youghnut, Cheese", y: 435, text: "435 cal" },
