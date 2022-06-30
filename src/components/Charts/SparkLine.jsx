@@ -5,6 +5,9 @@ import {
   SparklineTooltip,
 } from "@syncfusion/ej2-react-charts";
 
+// ! NOTE: Don't change this component to functional component (it could cause problems with syncfusion)
+
+// Spark Line
 class SparkLine extends React.PureComponent {
   render() {
     const { id, height, width, color, data, type, currentColor } = this.props;
@@ -32,6 +35,7 @@ class SparkLine extends React.PureComponent {
         yName="yval"
         type={type}
       >
+        {/* Inject required services */}
         <Inject services={[SparklineTooltip]} />
       </SparklineComponent>
     );

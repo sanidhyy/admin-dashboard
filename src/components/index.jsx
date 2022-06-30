@@ -1,3 +1,6 @@
+// Export new components here to use it anywhere else
+// Don't remove anything from here
+
 export { default as Button } from "./Button";
 export { default as ThemeSettings } from "./ThemeSettings";
 export { default as Sidebar } from "./Sidebar";

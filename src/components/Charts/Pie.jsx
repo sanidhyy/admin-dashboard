@@ -12,6 +12,7 @@ import {
 
 import { useStateContext } from "../../contexts/ContextProvider";
 
+// Doughnut Chart
 const Doughnut = ({ id, data, legendVisiblity, height }) => {
   const { currentMode } = useStateContext();
 
@@ -23,6 +24,7 @@ const Doughnut = ({ id, data, legendVisiblity, height }) => {
       background={currentMode === "Dark" ? "#33373E" : "#fff"}
       tooltip={{ enable: true }}
     >
+      {/* Inject required services */}
       <Inject
         services={[
           AccumulationLegend,
@@ -32,6 +34,7 @@ const Doughnut = ({ id, data, legendVisiblity, height }) => {
         ]}
       />
       <AccumulationSeriesCollectionDirective>
+        {/* Print each column data */}
         <AccumulationSeriesDirective
           name="Sale"
           dataSource={data}
