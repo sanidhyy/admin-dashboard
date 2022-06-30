@@ -33,7 +33,7 @@
 
 #preview {
   background: transparent
-    url("https://ej2.syncfusion.com/react/demos/src/color-picker/images/pen.png")
+    url("assets/images/pen.png")
     no-repeat;
   display: inline-block;
   height: 80px;
