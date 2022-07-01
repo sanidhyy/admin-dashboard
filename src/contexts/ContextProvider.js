@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState } from "react";
+import { cartData } from "../data/dummy";
 
 const StateContext = createContext();
 
@@ -10,6 +11,14 @@ const initialState = {
   notification: false,
 };
 
+let initialCartProduct = [];
+let initialTotalPrice = 0;
+
+cartData.map(({ id, price }) => {
+  initialCartProduct.push({ id, qty: 1 });
+  initialTotalPrice += price;
+});
+
 // Context Provider
 export const ContextProvider = ({ children }) => {
   const [activeMenu, setActiveMenu] = useState(true);
@@ -18,6 +27,8 @@ export const ContextProvider = ({ children }) => {
   const [currentColor, setCurrentColor] = useState("#03C9D7");
   const [currentMode, setCurrentMode] = useState("Light");
   const [themeSettings, setThemeSettings] = useState(false);
+  const [cartItems, setCartItems] = useState(initialCartProduct);
+  const [totalPrice, setTotalPrice] = useState(initialTotalPrice);
 
   // set theme mode handler
   const setMode = (e) => {
@@ -42,6 +53,51 @@ export const ContextProvider = ({ children }) => {
     setIsClicked({ ...initialState, [clicked]: !isClicked[clicked] });
   };
 
+  // increment qty
+  const incQty = (itemId) => {
+    const newCartItems = [];
+    cartItems.map(({ id, qty }) => {
+      if (itemId === id) {
+        newCartItems.push({ id, qty: qty + 1 });
+
+        // update total price
+        setTotalPrice(
+          (prevTotalPrice) =>
+            prevTotalPrice + cartData.find(({ id }) => itemId === id).price
+        );
+      } else {
+        newCartItems.push({ id, qty });
+      }
+    });
+
+    setCartItems(newCartItems);
+  };
+
+  // decrement qty
+  const decQty = (itemId) => {
+    const newCartItems = [];
+    cartItems.map(({ id, qty }) => {
+      let quantity = 1;
+      if (itemId === id) {
+        if (qty > 1) {
+          quantity = qty - 1;
+
+          // update total price
+          setTotalPrice(
+            (prevTotalPrice) =>
+              prevTotalPrice - cartData.find(({ id }) => itemId === id).price
+          );
+        }
+      } else {
+        quantity = qty;
+      }
+
+      newCartItems.push({ id, qty: quantity });
+    });
+
+    setCartItems(newCartItems);
+  };
+
   return (
     <StateContext.Provider
       value={{
@@ -61,6 +117,12 @@ export const ContextProvider = ({ children }) => {
         setMode,
         setColor,
         initialState,
+        cartItems,
+        setCartItems,
+        incQty,
+        decQty,
+        totalPrice,
+        setTotalPrice,
       }}
     >
       {/* Render children (App) */}

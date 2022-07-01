@@ -8,7 +8,8 @@ import { Button } from ".";
 
 // Cart
 const Cart = () => {
-  const { currentColor } = useStateContext();
+  const { currentColor, cartItems, incQty, decQty, totalPrice } =
+    useStateContext();
 
   return (
     <div className="bg-half-transparent w-full fixed nav-item top-0 right-0 ">
@@ -38,22 +39,31 @@ const Cart = () => {
                 />
                 <div>
                   {/* Product Title */}
-                  <p className="font-semibold ">{item.name}</p>
+                  <p className="font-semibold">{item.name}</p>
                   {/* Product Category */}
                   <p className="text-gray-600 dark:text-gray-400 text-sm font-semibold">
                     {item.category}
                   </p>
                   <div className="flex gap-4 mt-2 items-center">
                     {/* Product Price */}
-                    <p className="font-semibold text-lg">{item.price}</p>
+                    <p className="font-semibold text-lg">${item.price}</p>
                     <div className="flex items-center border-1 border-r-0 border-color rounded">
-                      <p className="p-2 border-r-1 dark:border-gray-600 border-color text-red-600 ">
+                      {/* Item Increment */}
+                      <p
+                        className="p-2 border-r-1 dark:border-gray-600 border-color text-red-600 cursor-pointer"
+                        onClick={() => decQty(item.id)}
+                      >
                         <AiOutlineMinus />
                       </p>
+                      {/* Item quantity */}
                       <p className="p-2 border-r-1 border-color dark:border-gray-600 text-green-600">
-                        0
+                        {cartItems.find(({ id }) => item.id === id)?.qty}
                       </p>
-                      <p className="p-2 border-r-1 border-color dark:border-gray-600 text-green-600">
+                      {/* Item Decrement */}
+                      <p
+                        className="p-2 border-r-1 border-color dark:border-gray-600 text-green-600 cursor-pointer"
+                        onClick={() => incQty(item.id)}
+                      >
                         <AiOutlinePlus />
                       </p>
                     </div>
@@ -68,11 +78,11 @@ const Cart = () => {
         <div className="mt-3 mb-3">
           <div className="flex justify-between items-center">
             <p className="text-gray-500 dark:text-gray-200">Sub Total</p>
-            <p className="font-semibold">$890</p>
+            <p className="font-semibold">${totalPrice}</p>
           </div>
           <div className="flex justify-between items-center mt-3">
             <p className="text-gray-500 dark:text-gray-200">Total</p>
-            <p className="font-semibold">$890</p>
+            <p className="font-semibold">${totalPrice}</p>
           </div>
         </div>
         {/* Place Order */}
