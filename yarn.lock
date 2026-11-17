@@ -1931,12 +1931,26 @@
   dependencies:
     "@syncfusion/ej2-icons" "~19.4.52"
 
+"@syncfusion/ej2-base@~35.1.37":
+  version "35.1.37"
+  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-base/-/ej2-base-35.1.37.tgz#dcfa9facea5da7d3cf3f8f8c4cafb933a832870c"
+  integrity sha512-pg4WMFGbZJ9XoGr7ecBQ4+afWeVh1s0nckwqa1fFe1PK48Szg/gV5rEFXygFsHfratparBVAJogAd8WrWv3pYg==
+  dependencies:
+    "@syncfusion/ej2-icons" "~35.1.37"
+
 "@syncfusion/ej2-buttons@~19.4.52", "@syncfusion/ej2-buttons@~19.4.53", "@syncfusion/ej2-buttons@~19.4.55":
   version "19.4.55"
   resolved "https://registry.yarnpkg.com/@syncfusion/ej2-buttons/-/ej2-buttons-19.4.55.tgz#3d7713817569211fafc4a6bb23f0443ddffae0dc"
   integrity sha512-Ebvh5GfvOEQaB51EI6a9Cfrmkfmu9gbPeRmLPkXZPEokUSxIqyCP216Nm8NlOeEK3EbPxrOy/L1X9m1nOBM40Q==
   dependencies:
     "@syncfusion/ej2-base" "~19.4.52"
+
+"@syncfusion/ej2-buttons@~35.1.37", "@syncfusion/ej2-buttons@~35.1.41":
+  version "35.1.41"
+  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-buttons/-/ej2-buttons-35.1.41.tgz#6e8a1b398be56fb724c30b10d9f5fd5ba3fe2dc9"
+  integrity sha512-Mg9+SRuXzGi3OyRlX8MNZFew2fRWsV8k7+PWNRKDV4fF4kvcIay/On3C9nKPWZxYvwG/GcVhOMqEIRMsM4Sb6g==
+  dependencies:
+    "@syncfusion/ej2-base" "~35.1.37"
 
 "@syncfusion/ej2-calendars@19.4.56", "@syncfusion/ej2-calendars@~19.4.52", "@syncfusion/ej2-calendars@~19.4.54", "@syncfusion/ej2-calendars@~19.4.55", "@syncfusion/ej2-calendars@~19.4.56":
   version "19.4.56"
@@ -1985,6 +1999,13 @@
   integrity sha512-btJDjKepcaVGtNqVoblhYFhx4sAW1ju+Nq1CBPn4kO0AtRPBQ3Gi47uQgsstkxNMDrv+UG1hNi7PhHpPNOtwUQ==
   dependencies:
     "@syncfusion/ej2-base" "~19.4.52"
+
+"@syncfusion/ej2-data@~35.1.37":
+  version "35.1.37"
+  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-data/-/ej2-data-35.1.37.tgz#5d3df7d6c894092d5aa6874333b7f994cd487c34"
+  integrity sha512-rjHvWvwOYWCvWhptPe9ldenOKZXPXFer0v2UrbJhSfJ1oC9NxCm+HX1MrfY46SStOz93s3X8XorF2LgQlXRyRA==
+  dependencies:
+    "@syncfusion/ej2-base" "~35.1.37"
 
 "@syncfusion/ej2-diagrams@~19.4.56":
   version "19.4.56"
@@ -2035,6 +2056,19 @@
     "@syncfusion/ej2-lists" "~19.4.55"
     "@syncfusion/ej2-navigations" "~19.4.56"
     "@syncfusion/ej2-popups" "~19.4.53"
+
+"@syncfusion/ej2-dropdowns@~35.1.37":
+  version "35.1.46"
+  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-dropdowns/-/ej2-dropdowns-35.1.46.tgz#f75d5281b242704a95f546ce2f7a780cd19e3c47"
+  integrity sha512-lyV0IzAeQP64EYAeZxkBKz0UPfbGrQmh00fzoM4UeZ3xRDL/lP3s+kNVOyuffSljtoQDX+anTUTUJfvdGNgo5Q==
+  dependencies:
+    "@syncfusion/ej2-base" "~35.1.37"
+    "@syncfusion/ej2-data" "~35.1.37"
+    "@syncfusion/ej2-inputs" "~35.1.43"
+    "@syncfusion/ej2-lists" "~35.1.43"
+    "@syncfusion/ej2-navigations" "~35.1.46"
+    "@syncfusion/ej2-notifications" "~35.1.37"
+    "@syncfusion/ej2-popups" "~35.1.42"
 
 "@syncfusion/ej2-excel-export@~19.4.52":
   version "19.4.52"
@@ -2121,6 +2155,11 @@
   resolved "https://registry.yarnpkg.com/@syncfusion/ej2-icons/-/ej2-icons-19.4.52.tgz#f6d69a9829e21ee527d56f4fb5d1d15126f93351"
   integrity sha512-hkEvuVA/soEdqFwFSGbj2Z9u6Ajb+4HZNYIKtw6aCwjn/FE5vFuGMFBdkLEX9BRkUl/e/uvyP6/TKBM/nfkY8A==
 
+"@syncfusion/ej2-icons@~35.1.37":
+  version "35.1.37"
+  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-icons/-/ej2-icons-35.1.37.tgz#75022db9cf33a18703fa8444a970fc2ecaba57a2"
+  integrity sha512-D7LC3O2OI2Ugc/DLShHvhoEPBEZCT9hj49PjV30CxfJ8ZyVR+EWl/GC3b1q1xMKLiB7ZhDrXBoZgq5mJaeVZuw==
+
 "@syncfusion/ej2-inplace-editor@~19.4.52":
   version "19.4.52"
   resolved "https://registry.yarnpkg.com/@syncfusion/ej2-inplace-editor/-/ej2-inplace-editor-19.4.52.tgz#4d1fa6ffa270f0ba7d8f04119f915ed8eafbfbdb"
@@ -2148,7 +2187,32 @@
     "@syncfusion/ej2-popups" "~19.4.52"
     "@syncfusion/ej2-splitbuttons" "~19.4.52"
 
-"@syncfusion/ej2-kanban@19.4.52", "@syncfusion/ej2-kanban@~19.4.52":
+"@syncfusion/ej2-inputs@~35.1.37", "@syncfusion/ej2-inputs@~35.1.43":
+  version "35.1.43"
+  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-inputs/-/ej2-inputs-35.1.43.tgz#cf88e8804fa878885cbdd832d83cf492096ae9bf"
+  integrity sha512-wyHVpSEBP6Aaxp3dENOiTswFC3ouSBRujTPLM0suL7q/ac8KPiHV9tCE5IdA5Ws8tJ1JCRDQ7nAP63O21XSUEg==
+  dependencies:
+    "@syncfusion/ej2-base" "~35.1.37"
+    "@syncfusion/ej2-buttons" "~35.1.41"
+    "@syncfusion/ej2-popups" "~35.1.42"
+    "@syncfusion/ej2-splitbuttons" "~35.1.37"
+
+"@syncfusion/ej2-kanban@35.1.37":
+  version "35.1.37"
+  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-kanban/-/ej2-kanban-35.1.37.tgz#c27b149eeff140c825329a00a8c10de54e4d6821"
+  integrity sha512-6Mu/qoH7r875Cly3xar/OvHNV3UwieFRNLbshDK6qIPMQPBsYCV+MN9htS59dC/yNKyafcH4h6mUCIikSneGyg==
+  dependencies:
+    "@syncfusion/ej2-base" "~35.1.37"
+    "@syncfusion/ej2-buttons" "~35.1.37"
+    "@syncfusion/ej2-data" "~35.1.37"
+    "@syncfusion/ej2-dropdowns" "~35.1.37"
+    "@syncfusion/ej2-inputs" "~35.1.37"
+    "@syncfusion/ej2-layouts" "~35.1.37"
+    "@syncfusion/ej2-navigations" "~35.1.37"
+    "@syncfusion/ej2-notifications" "~35.1.37"
+    "@syncfusion/ej2-popups" "~35.1.37"
+
+"@syncfusion/ej2-kanban@~19.4.52":
   version "19.4.52"
   resolved "https://registry.yarnpkg.com/@syncfusion/ej2-kanban/-/ej2-kanban-19.4.52.tgz#35e95e998440ad492677f43fd6af1c64aa7f1cb2"
   integrity sha512-4hZoBBikGe2GWNaZhKLAe68owJ77L70rodiA7MAOS/5WC8mUyhCaJiVrvsTLoVkhdBS/Hy37VuqeQaU3HjQrmQ==
@@ -2169,6 +2233,13 @@
   dependencies:
     "@syncfusion/ej2-base" "~19.4.52"
 
+"@syncfusion/ej2-layouts@~35.1.37":
+  version "35.1.41"
+  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-layouts/-/ej2-layouts-35.1.41.tgz#e845fdfa0ae2766e1f1004eacc8a165c21525eb4"
+  integrity sha512-76abVv4ZXDp+3ioCirY7lxVoCbD0Czn9ev8UguIz+iLWmQT/gxCgg3tfKJfuX2b5DTmlEsyeqPIVkG6LH8i5RQ==
+  dependencies:
+    "@syncfusion/ej2-base" "~35.1.37"
+
 "@syncfusion/ej2-lineargauge@~19.4.52":
   version "19.4.52"
   resolved "https://registry.yarnpkg.com/@syncfusion/ej2-lineargauge/-/ej2-lineargauge-19.4.52.tgz#83ae3bcd22894240752dee73e13e9a5f073f007d"
@@ -2186,6 +2257,16 @@
     "@syncfusion/ej2-base" "~19.4.52"
     "@syncfusion/ej2-buttons" "~19.4.55"
     "@syncfusion/ej2-data" "~19.4.54"
+
+"@syncfusion/ej2-lists@~35.1.43":
+  version "35.1.43"
+  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-lists/-/ej2-lists-35.1.43.tgz#e6222d9e8f53c60385ff954960fac80e162e2b0e"
+  integrity sha512-gPSfKrfamWZFhsNmOVby82gIfzs4hRUAaQOGfwC8VeUoRx6NDN78Z6IcYafzo12RRIew/HVu7CCXevGSkWnWTw==
+  dependencies:
+    "@syncfusion/ej2-base" "~35.1.37"
+    "@syncfusion/ej2-buttons" "~35.1.41"
+    "@syncfusion/ej2-data" "~35.1.37"
+    "@syncfusion/ej2-popups" "~35.1.42"
 
 "@syncfusion/ej2-maps@~19.4.56":
   version "19.4.56"
@@ -2212,6 +2293,19 @@
     "@syncfusion/ej2-lists" "~19.4.55"
     "@syncfusion/ej2-popups" "~19.4.53"
 
+"@syncfusion/ej2-navigations@~35.1.37", "@syncfusion/ej2-navigations@~35.1.46":
+  version "35.1.46"
+  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-navigations/-/ej2-navigations-35.1.46.tgz#297b8d48d2d309bfc41936bcb381f8de16af8ec6"
+  integrity sha512-SbeNvCbsxOPlnyis0ppDAzcx6uUMAa3vz/uK+LxqE8FKLxfmbKZQm8wmwyz+pBbf5ROU6BsSAyzqTfp1u88JJQ==
+  dependencies:
+    "@syncfusion/ej2-base" "~35.1.37"
+    "@syncfusion/ej2-buttons" "~35.1.41"
+    "@syncfusion/ej2-data" "~35.1.37"
+    "@syncfusion/ej2-inputs" "~35.1.43"
+    "@syncfusion/ej2-lists" "~35.1.43"
+    "@syncfusion/ej2-notifications" "~35.1.37"
+    "@syncfusion/ej2-popups" "~35.1.42"
+
 "@syncfusion/ej2-notifications@~19.4.52":
   version "19.4.52"
   resolved "https://registry.yarnpkg.com/@syncfusion/ej2-notifications/-/ej2-notifications-19.4.52.tgz#4cd20ddc6669fe407189116648bcd802fc13712e"
@@ -2220,6 +2314,15 @@
     "@syncfusion/ej2-base" "~19.4.52"
     "@syncfusion/ej2-buttons" "~19.4.52"
     "@syncfusion/ej2-popups" "~19.4.52"
+
+"@syncfusion/ej2-notifications@~35.1.37":
+  version "35.1.37"
+  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-notifications/-/ej2-notifications-35.1.37.tgz#b3d2156fa157534b8cdeda3a21614d1b42614727"
+  integrity sha512-UyjQ2Ykx8N1YrikYxrMaK9F7x/u4Ea4ZdCO8rL07binfF+lDEFlPpMoLbiQYatwb8gN++d5UbcyQXs/sYLIYfg==
+  dependencies:
+    "@syncfusion/ej2-base" "~35.1.37"
+    "@syncfusion/ej2-buttons" "~35.1.37"
+    "@syncfusion/ej2-popups" "~35.1.37"
 
 "@syncfusion/ej2-office-chart@~19.4.52":
   version "19.4.52"
@@ -2292,6 +2395,14 @@
     "@syncfusion/ej2-base" "~19.4.52"
     "@syncfusion/ej2-buttons" "~19.4.53"
 
+"@syncfusion/ej2-popups@~35.1.37", "@syncfusion/ej2-popups@~35.1.42":
+  version "35.1.42"
+  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-popups/-/ej2-popups-35.1.42.tgz#63a062e1aa2d7058d7874361062d0c3e9b898162"
+  integrity sha512-52kqHbVU0TvyLrGvZU7b9jQTWH+cYaP83qblDu/uhNpVoroBLxl6ShCLzT4qq8dfGPYzPfr9setFMQbmZ0cUTg==
+  dependencies:
+    "@syncfusion/ej2-base" "~35.1.37"
+    "@syncfusion/ej2-buttons" "~35.1.41"
+
 "@syncfusion/ej2-progressbar@~19.4.55":
   version "19.4.55"
   resolved "https://registry.yarnpkg.com/@syncfusion/ej2-progressbar/-/ej2-progressbar-19.4.55.tgz#26f902be50f4c386bd4c72d1464c784a92357c88"
@@ -2319,6 +2430,13 @@
   integrity sha512-mi1OKYgGfOe2MKcnMBuioYbdJea4IXCbFvUxG1WEZI5n3t6CxKH4ZWum7IgBO1kcTkaCdhs8Aj0ACFXUFmOwOQ==
   dependencies:
     "@syncfusion/ej2-base" "~19.4.52"
+
+"@syncfusion/ej2-react-base@~35.1.37":
+  version "35.1.37"
+  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-react-base/-/ej2-react-base-35.1.37.tgz#b540a712cc1756bf5c6577c1beca3504c2df5869"
+  integrity sha512-/XPO66tY2Hzcy9ukCHQav+NXDKQNP4omFhzqJ12bwLo4fauHec299j9prYcLNvC7W2Gh93asqIoOZ5ryQ94PJw==
+  dependencies:
+    "@syncfusion/ej2-base" "~35.1.37"
 
 "@syncfusion/ej2-react-calendars@^19.4.48":
   version "19.4.56"
@@ -2365,14 +2483,14 @@
     "@syncfusion/ej2-inputs" "19.4.52"
     "@syncfusion/ej2-react-base" "~19.4.52"
 
-"@syncfusion/ej2-react-kanban@^19.4.48":
-  version "19.4.52"
-  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-react-kanban/-/ej2-react-kanban-19.4.52.tgz#4fb6dd6d70db4bb99ace382d42908f0ef318fc8d"
-  integrity sha512-KZoZ+xloU7Om9IRvfNYEeN8ra5e8Q+fUwZRYm2uVN2gdhaIMhOGQBGTX2VBjyH62s5GNcH8S3RZUF8iITjBkAA==
+"@syncfusion/ej2-react-kanban@^35.1.37":
+  version "35.1.37"
+  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-react-kanban/-/ej2-react-kanban-35.1.37.tgz#f7511df308874a2b74bf277335d14edddbbd7ff2"
+  integrity sha512-ricIDTG3V1QRZiQphZ5w/PRxTo7Fx5XaoEr0rpU0bGo1W6qA/rvkdnhsAl9tVlG3kI+kQPPQnCgJCky4ow9/0w==
   dependencies:
-    "@syncfusion/ej2-base" "~19.4.52"
-    "@syncfusion/ej2-kanban" "19.4.52"
-    "@syncfusion/ej2-react-base" "~19.4.52"
+    "@syncfusion/ej2-base" "~35.1.37"
+    "@syncfusion/ej2-kanban" "35.1.37"
+    "@syncfusion/ej2-react-base" "~35.1.37"
 
 "@syncfusion/ej2-react-popups@^19.4.52":
   version "19.4.53"
@@ -2437,6 +2555,14 @@
   dependencies:
     "@syncfusion/ej2-base" "~19.4.52"
     "@syncfusion/ej2-popups" "~19.4.52"
+
+"@syncfusion/ej2-splitbuttons@~35.1.37":
+  version "35.1.37"
+  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-splitbuttons/-/ej2-splitbuttons-35.1.37.tgz#1035f3489ed842abc1691c331fc8ec4a8027042f"
+  integrity sha512-whjKUf7p9grTtDxssx4s2u9gYDysiRHBn658dj6oRMKoYAECdaw5H/WEIcqKoxA6B1hJyUHZ8GE1SbWdV7eSVw==
+  dependencies:
+    "@syncfusion/ej2-base" "~35.1.37"
+    "@syncfusion/ej2-popups" "~35.1.37"
 
 "@syncfusion/ej2-spreadsheet@~19.4.56":
   version "19.4.56"
