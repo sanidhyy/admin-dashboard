@@ -10,18 +10,12 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/6aeb1ab3-871d-48c0-bc09-2e1fcaef0c2b/deploy-status)](https://shoppy-dashboard-react.netlify.app/ "Netlify Status")
 [![GitHub issues](https://img.shields.io/github/issues/sanidhyy/admin-dashboard)](https://github.com/sanidhyy/admin-dashboard/issues "GitHub issues")
 
-## ⚠️ Before you start
-
-1. Make sure [Git](https://git-scm.com) and [NodeJS](https://nodejs.org) are installed
-2. **Yarn** is faster than Npm. So use [Yarn](https://classic.yarnpkg.com/lang/en/docs/install/).
-3. You are ready to go :fire:
-
 ## 📌 How to use this App?
 
 1. Clone this **repository** to your local computer.
 2. Open **terminal** in root directory.
-3. Type and Run `npm install` or `yarn install`.
-4. Once packages are installed, you can start this app using `npm start` or `yarn start`
+3. Type and Run `npm install` or `pnpm install`.
+4. Once packages are installed, you can start this app using `npm start` or `pnpm start`
 5. Now app is fully configured and you can start using this app :+1:
 
 ### :raising_hand: Need Help?
