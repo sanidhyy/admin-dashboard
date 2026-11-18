@@ -1,6 +1,6 @@
 import React from "react";
 import { BsCurrencyDollar } from "react-icons/bs";
-import { GoPrimitiveDot } from "react-icons/go";
+import { GoDotFill } from "react-icons/go";
 import { IoIosMore } from "react-icons/io";
 import { DropDownListComponent } from "@syncfusion/ej2-react-dropdowns";
 
@@ -102,7 +102,7 @@ const ECommerce = () => {
               {/* Expenses */}
               <p className="flex items-center gap-2 text-gray-600 hover:drop-shadow-xl">
                 <span>
-                  <GoPrimitiveDot />
+                  <GoDotFill />
                 </span>
                 <span>Expense</span>
               </p>
@@ -110,7 +110,7 @@ const ECommerce = () => {
               {/* Budget */}
               <p className="flex items-center gap-2 text-green-400 hover:drop-shadow-xl">
                 <span>
-                  <GoPrimitiveDot />
+                  <GoDotFill />
                 </span>
                 <span>Budget</span>
               </p>
